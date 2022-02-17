@@ -62,7 +62,7 @@ def load_kube():
 @click.option('--namespace', type=click.STRING, default=None, autocompletion=namespace_completion)
 @click.option('--write-to-files', is_flag=True, help="If set each key in the secret will be written to it's own file instead of being printed.")
 @click.argument('name', nargs=1, type=click.STRING, autocompletion=name_completion)
-def main(name, namespace, write_to_files=False):
+def cli(name, namespace, write_to_files=False):
     v1_client = load_kube()
     try: 
         secret = v1_client.read_namespaced_secret(name, namespace if namespace is not None else "default")
@@ -77,4 +77,4 @@ def main(name, namespace, write_to_files=False):
     sys.exit(1)
 
 if __name__ == '__main__':
-    main()
+    cli()
