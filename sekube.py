@@ -1,12 +1,10 @@
 #!/usr/bin/python
 
-from kubernetes import client, config
 import base64
 import sys
-import signal
 import json
-import time
 
+from kubernetes import client, config
 import editdistance
 import click
 
