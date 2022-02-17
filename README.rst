@@ -13,6 +13,27 @@ you can figure out what is wrong..” you have to do this little dance
 with ``kubectl [blah] -o json | jq -r .data[] |base64 -d`` and it gets
 quite tedious after a while. This script aims to be stupid and simple
 and just simplify those steps.
+ 
+Usage example
+-------------
+
+entering a non-existant secret (not using tab-complete) ::
+
+  $ sekube certi
+  Error: "certi" not found in "None", did you mean:
+    sec-certificate-monitor in default
+    certificate-controller-token in kube-system
+    sec-webscale in default
+    ipfs in ipfs 
+
+
+Printing the content of a secret to the screen ::
+
+  $ sekube sec-certificate-monitor
+  ============= github_token =============
+  coffebeef39aa0f530e231709895700911232f0c
+  ============== sentry_dsn ==============
+  https://badb0xcas9ae5bd8c956a35b5c50d3e9@sentry.io/555
 
 It supports tab-completion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
