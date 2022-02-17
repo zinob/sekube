@@ -1,8 +1,10 @@
 SeKube a dumb program to show kubernetes secrets
 ================================================
 
-It does two things: \* It lists kubernetes secrets \* It prints
-kubernetes secrets
+It does two things:
+
+ * It lists kubernetes secrets
+ * It prints kubernetes secrets
 
 KubeCTL is fine and dandy but when you are doing OPS and some one asks
 you “we can’t get it to work, can you confirm the content of this

@@ -5,7 +5,7 @@ with open('README.rst') as f:
 
 setup(
     name='sekube',
-    version='0.1.2',
+    version='0.1.4',
     description='Incredibly naivé program to read secrets from a kubernettes cluster',
     long_description=readme,
     author='Simon Albinsson',
