@@ -1,11 +1,11 @@
 from setuptools import setup
 
-with open('README.md') as f:
+with open('README.rst') as f:
     readme = f.read()
 
 setup(
     name='sekube',
-    version='0.1.1',
+    version='0.1.2',
     description='Incredibly naivé program to read secrets from a kubernettes cluster',
     long_description=readme,
     author='Simon Albinsson',
