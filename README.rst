@@ -1,10 +1,11 @@
 SeKube a dumb program to show kubernetes secrets
 ================================================
 
-It does two things:
+It does two(and a half) things:
 
  * It lists kubernetes secrets
  * It prints kubernetes secrets
+ * It caches availible secrets for fast tab-completion
 
 KubeCTL is fine and dandy but when you are doing OPS and some one asks
 you “we can’t get it to work, can you confirm the content of this
@@ -13,6 +14,11 @@ you can figure out what is wrong..” you have to do this little dance
 with ``kubectl [blah] -o json | jq -r .data[] |base64 -d`` and it gets
 quite tedious after a while. This script aims to be stupid and simple
 and just simplify those steps.
+
+Further more trying to use kubectl for tab-completion can be quite a
+chore due to the long response time. In order to aliviate this sekube
+tries to keep a local cache of availible keys in order to make
+tab-completion faster.
  
 Usage example
 -------------
